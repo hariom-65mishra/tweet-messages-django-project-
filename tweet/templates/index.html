@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}Welcome to ChaiHeadQ - Sip Chai & Share Thoughts{% endblock %}
+
+{% block content %}
+<div class="py-5 text-center">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-warning-subtle text-warning-emphasis mb-4 small fw-semibold">
+                <span>☕ Chai aur Code Django Project</span>
+            </div>
+
+            <h1 class="display-4 fw-bold mb-3 brand-gradient">
+                Sip Chai. Share Thoughts.
+            </h1>
+            <p class="lead text-secondary mb-5 mx-auto" style="max-width: 650px;">
+                Welcome to <strong>ChaiHeadQ</strong> &mdash; the lightweight, community-driven micro-blogging platform. Share your daily thoughts, code snippets, and favorite moments in a warm cup of coffee and tea.
+            </p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+                <a href="{% url 'tweet_list' %}" class="btn btn-chai rounded-pill px-5 py-3 fs-6">
+                    <i class="bi bi-chat-quote me-2"></i>Explore Tweets
+                </a>
+                <a href="{% url 'tweet_create' %}" class="btn btn-chai-outline rounded-pill px-5 py-3 fs-6">
+                    <i class="bi bi-plus-circle me-2"></i>Brew New Tweet
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="row g-4 mt-4 text-start">
+        <div class="col-md-4">
+            <div class="card card-custom h-100 p-4">
+                <div class="fs-2 text-warning mb-3">
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h5 class="fw-bold text-light mb-2">Fast & Lightweight</h5>
+                <p class="text-secondary small mb-0">
+                    Built with Django for rock-solid stability and fast server-rendered performance.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-custom h-100 p-4">
+                <div class="fs-2 text-warning mb-3">
+                    <i class="bi bi-images"></i>
+                </div>
+                <h5 class="fw-bold text-light mb-2">Photo & Text Tweets</h5>
+                <p class="text-secondary small mb-0">
+                    Attach photos alongside your 240-character thoughts to make your updates stand out.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-custom h-100 p-4">
+                <div class="fs-2 text-warning mb-3">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+                <h5 class="fw-bold text-light mb-2">Secure & Reliable</h5>
+                <p class="text-secondary small mb-0">
+                    Full user authentication and permissions ensuring you stay in complete control of your posts.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
